@@ -1,10 +1,7 @@
 require 'nokogiri'
 require 'open-uri'
 require 'pry'
-<<<<<<< HEAD
- 
-=======
->>>>>>> 33d4ab773d23a809989c7853de8ea01c31e48770
+
 require_relative './course.rb'
  
 class Scraper
@@ -13,7 +10,7 @@ class Scraper
      doc = Nokogiri::HTML(open("http://learn-co-curriculum.github.io/site-for-scraping/courses"))
    end
   
-<<<<<<< HEAD
+
   def get_courses
      get_page.css(".post")
   end
@@ -28,16 +25,10 @@ class Scraper
   end 
 
 
- def print_courses
-=======
-  def get_page
-     doc = Nokogiri::HTML(open("http://learn-co-curriculum.github.io/site-for-scraping/courses"))
-        binding.pry
 
-  end
   
     def print_courses
->>>>>>> 33d4ab773d23a809989c7853de8ea01c31e48770
+
     self.make_courses
     Course.all.each do |course|
       if course.title
@@ -48,13 +39,8 @@ class Scraper
     end
   end
   
-<<<<<<< HEAD
+
   end 
 
 Scraper.new.print_courses
-=======
-end
 
-
-Scraper.new.get_page
->>>>>>> 33d4ab773d23a809989c7853de8ea01c31e48770
